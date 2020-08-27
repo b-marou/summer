@@ -154,6 +154,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   question: {fileID: 1175760903}
   probability: 0
+  inputField: {fileID: 0}
+  clockText: {fileID: 0}
+  totalCountText: {fileID: 0}
+  pointsText: {fileID: 0}
 --- !u!212 &148783267
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1026,7 +1030,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 79fd74846d27f4f40a942fea29d0e20d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1263,6 +1267,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   question: {fileID: 1175760903}
   probability: 0
+  inputField: {fileID: 0}
+  clockText: {fileID: 0}
+  totalCountText: {fileID: 0}
+  pointsText: {fileID: 0}
 --- !u!212 &1272865327
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1408,7 +1416,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: f72323c658a657c4795a0cba554ac565, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2008,7 +2016,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 2f0ffb67cebc3b249b59d014d774ea27, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

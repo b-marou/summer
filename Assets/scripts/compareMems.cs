@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Video;
 using UnityEngine.UI;
 using System;
 
@@ -17,11 +18,28 @@ public class compareMems : MonoBehaviour
     public Text question;
     public Text points;
     int currientPoints = 100;
+    public VideoPlayer VPlayer1;
+    public VideoPlayer VPlayer2;
+    public VideoPlayer VPlayer3;
+    public GameObject Square;
+    public GameObject Square2;
+    public GameObject Square3;
+    bool isPlay1;
+    bool isPlay2;
+    bool isPlay3;
 
     // Start is called before the first frame update
     void Start()
     {
         totalCountText.text = $"{count}/{totalQuestionsCount}";
+        Square.SetActive(true);
+        Square2.SetActive(false);
+        Square3.SetActive(false);
+        if (isPlay1)
+            VPlayer1.Pause();
+        else
+            VPlayer1.Play();
+        isPlay1 = !isPlay1;
     }
 
     public void Change()
@@ -50,6 +68,14 @@ public class compareMems : MonoBehaviour
                         points.text = "40/100";
                     else
                         points.text = $"{currientPoints}/100";
+                    Square.SetActive(false);
+                    Square2.SetActive(true);
+                    Square3.SetActive(false);
+                    if (isPlay2)
+                        VPlayer2.Pause();
+                    else
+                        VPlayer2.Play();
+                    isPlay2 = !isPlay2;
                     return;
                 }
                 else
@@ -60,6 +86,13 @@ public class compareMems : MonoBehaviour
             {
                 field.text = "Неверно(";
                 currientPoints -= 5;
+                Square.SetActive(false);
+                Square2.SetActive(false);
+                Square3.SetActive(true);
+                if (isPlay3)
+                    VPlayer3.Pause();
+                else
+                    VPlayer3.Play();
             }
         }
         catch (Exception)
@@ -67,8 +100,6 @@ public class compareMems : MonoBehaviour
             field.text = testing.ToString();
             return;
         }
-       /* field.text = "Неверно(";
-        currientPoints -= 5;*/
     }
 
 }
