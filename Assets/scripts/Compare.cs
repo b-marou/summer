@@ -23,6 +23,7 @@ public class Compare : MonoBehaviour
     public GameObject Square;
     public GameObject Square2;
     public GameObject Square3;
+    public GameObject Square4;
     bool isPlay1;
     bool isPlay2;
     bool isPlay3;
@@ -34,6 +35,7 @@ public class Compare : MonoBehaviour
         Square.SetActive(true);
         Square2.SetActive(false);
         Square3.SetActive(false);
+        Square4.SetActive(false);
         if (isPlay1)
             VPlayer1.Pause();
         else
@@ -68,6 +70,7 @@ public class Compare : MonoBehaviour
                     Square.SetActive(false);
                     Square2.SetActive(true);
                     Square3.SetActive(false);
+                    Square4.SetActive(false);
                     if (isPlay2)
                         VPlayer2.Pause();
                     else
@@ -86,6 +89,7 @@ public class Compare : MonoBehaviour
                 Square.SetActive(false);
                 Square2.SetActive(false);
                 Square3.SetActive(true);
+                Square4.SetActive(false);
                 if (isPlay3)
                     VPlayer3.Pause();
                 else
