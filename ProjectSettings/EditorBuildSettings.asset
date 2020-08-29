@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: cd0764e161206514d9a3af430c036118
+  - enabled: 1
+    path: Assets/Scenes/Memes.unity
+    guid: a6be41de8c0f3ca46b4f025d466e84c7
+  - enabled: 1
+    path: Assets/Scenes/Socks.unity
+    guid: d35a4278bc732ce4c9f0315f6b401a3e
+  - enabled: 1
     path: Assets/Scenes/Students.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}
