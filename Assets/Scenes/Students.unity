@@ -396,7 +396,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 28.664001}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -259, y: -5}
+  m_AnchoredPosition: {x: -221, y: 0}
   m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &169325171
@@ -749,8 +749,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 143.6, y: -12}
-  m_SizeDelta: {x: 253.44702, y: 414.6596}
+  m_AnchoredPosition: {x: 145, y: -11}
+  m_SizeDelta: {x: 253.44702, y: 463.6413}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &710695062
 MonoBehaviour:
@@ -783,7 +783,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 0.8
+    m_LineSpacing: 0.9
   m_Text: 
 --- !u!222 &710695063
 CanvasRenderer:
@@ -1206,13 +1206,17 @@ MonoBehaviour:
   clockText: {fileID: 1103173304}
   question: {fileID: 1175760903}
   points: {fileID: 169325171}
-  VPlayer1: {fileID: 83352053}
-  VPlayer2: {fileID: 1340273991}
-  VPlayer3: {fileID: 983805136}
-  Square: {fileID: 83352052}
-  Square2: {fileID: 1340273990}
-  Square3: {fileID: 983805135}
-  Square4: {fileID: 703160949}
+  VideoWaiting: {fileID: 83352053}
+  VideoSuccess: {fileID: 1340273991}
+  VideoUnfortune: {fileID: 983805136}
+  SquareWaiting: {fileID: 83352052}
+  SquareSuccess: {fileID: 1340273990}
+  SquareUnfortune: {fileID: 983805135}
+  SquareHint: {fileID: 703160949}
+  HelpVkladka: {fileID: 1978678819}
+  HelpTxt: {fileID: 1960288424}
+  ClockTxt: {fileID: 1103173303}
+  Chasy: {fileID: 2103526473}
 --- !u!114 &1106767270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2363,7 +2367,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 12800000, guid: a56bdf6c1eb540840a35955e6af3f6a5, type: 3}
     m_FontSize: 20
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 40

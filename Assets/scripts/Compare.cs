@@ -17,30 +17,34 @@ public class Compare : MonoBehaviour
     public Text question;
     public Text points;
     int currientPoints = 100;
-    public VideoPlayer VPlayer1;
-    public VideoPlayer VPlayer2;
-    public VideoPlayer VPlayer3;
-    public GameObject Square;
-    public GameObject Square2;
-    public GameObject Square3;
-    public GameObject Square4;
-    bool isPlay1;
-    bool isPlay2;
-    bool isPlay3;
+    public VideoPlayer VideoWaiting;
+    public VideoPlayer VideoSuccess;
+    public VideoPlayer VideoUnfortune;
+    public GameObject SquareWaiting;
+    public GameObject SquareSuccess;
+    public GameObject SquareUnfortune;
+    public GameObject SquareHint;
+    public GameObject HelpVkladka;
+    public GameObject HelpTxt;
+    public GameObject ClockTxt;
+    public GameObject Chasy;
+    bool isPlayWaiting;
+    bool isPlaySuccess;
+    bool isPlayUnfortune;
 
     // Start is called before the first frame update
     void Start()
     {
         totalCountText.text = $"{count}/{totalQuestionsCount}";
-        Square.SetActive(true);
-        Square2.SetActive(false);
-        Square3.SetActive(false);
-        Square4.SetActive(false);
-        if (isPlay1)
-            VPlayer1.Pause();
+        SquareWaiting.SetActive(true);
+        SquareSuccess.SetActive(false);
+        SquareUnfortune.SetActive(false);
+        SquareHint.SetActive(false);
+        if (isPlayWaiting)
+            VideoWaiting.Pause();
         else
-            VPlayer1.Play();
-        isPlay1 = !isPlay1;
+            VideoWaiting.Play();
+        isPlayWaiting = !isPlayWaiting;
     }
 
     public void Change()
@@ -67,15 +71,19 @@ public class Compare : MonoBehaviour
                         points.text = "40/100";
                     else
                         points.text = $"{currientPoints}/100";
-                    Square.SetActive(false);
-                    Square2.SetActive(true);
-                    Square3.SetActive(false);
-                    Square4.SetActive(false);
-                    if (isPlay2)
-                        VPlayer2.Pause();
+                    SquareWaiting.SetActive(false);
+                    SquareSuccess.SetActive(true);
+                    SquareUnfortune.SetActive(false);
+                    SquareHint.SetActive(false);
+                    HelpVkladka.SetActive(false);
+                    HelpTxt.SetActive(false);
+                    ClockTxt.SetActive(false);
+                    Chasy.SetActive(false);
+                    if (isPlaySuccess)
+                        VideoSuccess.Pause();
                     else
-                        VPlayer2.Play();
-                    isPlay2 = !isPlay2;
+                        VideoSuccess.Play();
+                    isPlaySuccess = !isPlaySuccess;
                     return;
                 }
                 else
@@ -86,14 +94,14 @@ public class Compare : MonoBehaviour
             {
                 field.text = "Неверно(";
                 currientPoints -= 5;
-                Square.SetActive(false);
-                Square2.SetActive(false);
-                Square3.SetActive(true);
-                Square4.SetActive(false);
-                if (isPlay3)
-                    VPlayer3.Pause();
+                SquareWaiting.SetActive(false);
+                SquareSuccess.SetActive(false);
+                SquareUnfortune.SetActive(true);
+                SquareHint.SetActive(false);
+                if (isPlayUnfortune)
+                    VideoUnfortune.Pause();
                 else
-                    VPlayer3.Play();
+                    VideoUnfortune.Play();
             }
         }
         catch (Exception)
@@ -101,5 +109,4 @@ public class Compare : MonoBehaviour
             return;
         }
     }
-
 }
