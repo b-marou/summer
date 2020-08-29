@@ -31,7 +31,6 @@ public class compareMems : MonoBehaviour
     public GameObject Chasy;
     bool isPlayWaiting;
     bool isPlaySuccess;
-    bool isPlayUnfortune;
 
     // Start is called before the first frame update
     void Start()
@@ -101,10 +100,7 @@ public class compareMems : MonoBehaviour
                 SquareSuccess.SetActive(false);
                 SquareUnfortune.SetActive(true);
                 SquareHint.SetActive(false);
-                if (isPlayUnfortune)
-                    VideoUnfortune.Pause();
-                else
-                    VideoUnfortune.Play();
+                VideoUnfortune.Play();
             }
         }
         catch (Exception)

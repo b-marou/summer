@@ -15,7 +15,6 @@ public class helpSocks : MonoBehaviour
     public GameObject SquareSuccess;
     public GameObject SquareUnfortune;
     public GameObject SquareHint;
-    bool isPlayWaiting;
     bool isPlayHint;
 
     void OnMouseDown()
@@ -25,10 +24,7 @@ public class helpSocks : MonoBehaviour
             helpText.text = "";
             SquareWaiting.SetActive(true);
             SquareHint.SetActive(false);
-            if (isPlayWaiting)
-                WaitingVideo.Pause();
-            else
-                WaitingVideo.Play();
+            WaitingVideo.Play();
             if (isPlayHint)
                 HintVideo.Pause();
             else
